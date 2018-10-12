@@ -32,11 +32,13 @@ private long id;
 private String title;
 @NotBlank
 private String content;
-@Column(nullable=false,updatable=false)
+
+@Column(nullable = false, updatable = false)
 @Temporal(TemporalType.TIMESTAMP)
 @CreatedDate
 private Date createdAt;
-@Column(nullable=false)
+
+@Column(nullable = false)
 @Temporal(TemporalType.TIMESTAMP)
 @LastModifiedDate
 private Date updatedAt;
