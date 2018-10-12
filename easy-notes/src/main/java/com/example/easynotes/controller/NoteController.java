@@ -24,11 +24,13 @@ import com.example.easynotes.repository.NoteRepository;
 public class NoteController {
 @Autowired
 NoteRepository noterepository;
+
 //Get All Notes
 @GetMapping("/notes")
 public List<Note>getAllNotes(){
 	return noterepository.findAll();
 }
+
 //Create a new Note
 @PostMapping("/notes")
 public Note createNote(@Valid @RequestBody Note note) {
